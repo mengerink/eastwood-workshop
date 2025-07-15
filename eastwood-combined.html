@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eastwood Workshop - Premium Bathroom Remodeling</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background-color: #f7fafc;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .navbar {
+            background-color: #1a2332;
+            padding: 0.5rem 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 200px;
+        }
+
+        /* Logo container - positioned independently */
+        .logo-container {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1001;
+        }
+
+        .logo-container img {
+            height: 160px;
+            width: auto;
+            display: block;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #d4af37;
+        }
+
+        .phone a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            background-color: #d4af37;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .phone a:hover {
+            background-color: #b8860b;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a2332 0%, #2d3748 50%, #4a5568 100%);
+            color: white;
+            padding: 120px 0 80px;
+            margin-top: 60px;
+        }
+
+        .hero .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-offer {
+            background-color: #d4af37;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            display: inline-block;
+            border: 2px solid #b8860b;
+        }
+
+        .offer-text {
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .cta-button {
+            background-color: #d4af37;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .cta-button:hover {
+            background-color: #b8860b;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        .hero-image {
+            text-align: center;
+        }
+
+        .placeholder-image {
+            background-color: #4a5568;
+            color: white;
+            padding: 4rem 2rem;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 300px;
+            border: 2px solid #2d3748;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background-color: #f7fafc;
+        }
+
+        .services h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1a2332;
+            margin-bottom: 3rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px solid #edf2f7;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(26, 35, 50, 0.15);
+            border-color: #d4af37;
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            color: #1a2332;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            padding: 80px 0;
+            background-color: #edf2f7;
+        }
+
+        .gallery h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1a2332;
+            margin-bottom: 3rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .gallery-item {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .before, .after {
+            position: relative;
+        }
+
+        .before .placeholder-image {
+            background-color: #4a5568;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            min-height: 200px;
+            border-right: 1px solid #2d3748;
+        }
+
+        .after .placeholder-image {
+            background-color: #d4af37;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            min-height: 200px;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1a2332;
+            margin-bottom: 3rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #d4af37;
+        }
+
+        .feature h3 {
+            color: #1a2332;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature p {
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 80px 0;
+            background-color: #edf2f7;
+        }
+
+        .testimonials h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1a2332;
+            margin-bottom: 3rem;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .stars {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #d4af37;
+        }
+
+        .testimonial p {
+            color: #2d3748;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .testimonial cite {
+            color: #1a2332;
+            font-weight: bold;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #1a2332 0%, #2d3748 100%);
+            color: white;
+        }
+
+        .contact h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .contact-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-form {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            color: #2d3748;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #edf2f7;
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #d4af37;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a2332;
+            color: white;
+            padding: 2rem 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .footer-logo img {
+            height: 80px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #d4af37;
+        }
+
+        .footer-contact {
+            text-align: right;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero .container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .navbar .container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 1rem;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .footer-contact {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <img src="eastwood_logo.png" alt="Eastwood Workshop">
+    </div>
+    
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-links">
+                    <a href="#services">Services</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#testimonials">Testimonials</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="phone">
+                    <a href="tel:415-994-3934">Call (415) 994-3934</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Premium Bathroom Remodeling by Eastwood Workshop</h1>
+                    <p class="hero-subtitle">Expert Craftsmanship & Quality Materials for Your Dream Bathroom</p>
+                    <div class="hero-offer">
+                        <span class="offer-text">FREE Design Consultation</span>
+                    </div>
+                    <button class="cta-button">Schedule Your Free Estimate</button>
+                </div>
+                <div class="hero-image">
+                    <div class="placeholder-image">Beautiful Bathroom Image</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">🚿</div>
+                        <h3>Shower Installations</h3>
+                        <p>Custom shower designs with premium materials and expert installation</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🛁</div>
+                        <h3>Bathtub Remodeling</h3>
+                        <p>Transform your bathtub with modern fixtures and elegant finishes</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🔧</div>
+                        <h3>Full Bathroom Renovation</h3>
+                        <p>Complete bathroom makeovers from design to final installation</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">♿</div>
+                        <h3>Accessibility Solutions</h3>
+                        <p>Safe and stylish accessibility features for all mobility needs</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="gallery">
+            <div class="container">
+                <h2>Before & After Gallery</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <div class="before-after">
+                            <div class="before">
+                                <div class="placeholder-image">Before</div>
+                            </div>
+                            <div class="after">
+                                <div class="placeholder-image">After</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="before-after">
+                            <div class="before">
+                                <div class="placeholder-image">Before</div>
+                            </div>
+                            <div class="after">
+                                <div class="placeholder-image">After</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="before-after">
+                            <div class="before">
+                                <div class="placeholder-image">Before</div>
+                            </div>
+                            <div class="after">
+                                <div class="placeholder-image">After</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2>Why Choose Eastwood Workshop?</h2>
+                <div class="features-grid">
+                    <div class="feature">
+                        <div class="feature-icon">⭐</div>
+                        <h3>Premium Quality</h3>
+                        <p>We use only the finest materials and expert craftsmanship</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>Lifetime Warranty</h3>
+                        <p>All our work comes with a comprehensive lifetime warranty</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Quick Installation</h3>
+                        <p>Most projects completed in 1-2 days with minimal disruption</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">💎</div>
+                        <h3>Custom Design</h3>
+                        <p>Personalized designs tailored to your style and needs</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <h2>What Our Customers Say</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Eastwood Workshop transformed our outdated bathroom into a beautiful, modern space. The quality of work exceeded our expectations!"</p>
+                        <cite>- Sarah M.</cite>
+                    </div>
+                    <div class="testimonial">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Professional, punctual, and incredibly skilled. Our new shower is absolutely stunning. Highly recommend!"</p>
+                        <cite>- Michael D.</cite>
+                    </div>
+                    <div class="testimonial">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"The team at Eastwood Workshop was amazing. They completed our bathroom renovation in just two days with minimal mess."</p>
+                        <cite>- Jennifer L.</cite>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Get Your Free Estimate Today</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <p>📞 (415) 994-3934</p>
+                        <p>📧 info@eastwoodworkshop.com</p>
+                        <p>📍 Serving the Greater Metro Area</p>
+                    </div>
+                    <div class="contact-form">
+                        <form>
+                            <div class="form-group">
+                                <input type="text" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" placeholder="Your Phone" required>
+                            </div>
+                            <div class="form-group">
+                                <select>
+                                    <option>Select Service Interest</option>
+                                    <option>Shower Installation</option>
+                                    <option>Bathtub Remodeling</option>
+                                    <option>Full Bathroom Renovation</option>
+                                    <option>Accessibility Solutions</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <textarea placeholder="Project Details" rows="4"></textarea>
+                            </div>
+                            <button type="submit" class="cta-button">Get Free Estimate</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="eastwood_logo.png" alt="Eastwood Workshop">
+                </div>
+                <div class="footer-links">
+                    <a href="#services">Services</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#testimonials">Testimonials</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-contact">
+                    <p>© 2024 Eastwood Workshop. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

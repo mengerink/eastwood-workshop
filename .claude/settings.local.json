@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:promo.premier-homepros.com)"
+    ],
+    "deny": []
+  }
+}
