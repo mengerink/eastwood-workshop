@@ -657,27 +657,27 @@
                         <p>📍 Serving the Greater Metro Area</p>
                     </div>
                     <div class="contact-form">
-                        <form>
+                        <form id="contactForm" onsubmit="submitForm(event)">
                             <div class="form-group">
-                                <input type="text" placeholder="Your Name" required>
+                                <input type="text" id="name" placeholder="Your Name" required>
                             </div>
                             <div class="form-group">
-                                <input type="email" placeholder="Your Email" required>
+                                <input type="email" id="email" placeholder="Your Email" required>
                             </div>
                             <div class="form-group">
-                                <input type="tel" placeholder="Your Phone" required>
+                                <input type="tel" id="phone" placeholder="Your Phone" required>
                             </div>
                             <div class="form-group">
-                                <select>
-                                    <option>Select Service Interest</option>
-                                    <option>Shower Installation</option>
-                                    <option>Bathtub Remodeling</option>
-                                    <option>Full Bathroom Renovation</option>
-                                    <option>Accessibility Solutions</option>
+                                <select id="service" required>
+                                    <option value="">Select Service Interest</option>
+                                    <option value="Shower Installation">Shower Installation</option>
+                                    <option value="Bathtub Remodeling">Bathtub Remodeling</option>
+                                    <option value="Full Bathroom Renovation">Full Bathroom Renovation</option>
+                                    <option value="Accessibility Solutions">Accessibility Solutions</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <textarea placeholder="Project Details" rows="4"></textarea>
+                                <textarea id="details" placeholder="Project Details" rows="4"></textarea>
                             </div>
                             <button type="submit" class="cta-button">Get Free Estimate</button>
                         </form>
@@ -705,5 +705,32 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('service').value;
+            const details = document.getElementById('details').value;
+            
+            const subject = 'Free Estimate Request from ' + name;
+            const body = `
+New estimate request from the Eastwood Workshop website:
+
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+Service Interest: ${service}
+Project Details: ${details}
+            `.trim();
+            
+            const mailtoLink = `mailto:david@mengerink.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            
+            window.location.href = mailtoLink;
+        }
+    </script>
 </body>
 </html>
