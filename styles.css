@@ -404,6 +404,32 @@ body {
     border-color: #d4af37;
 }
 
+/* Personalized Banner */
+.personalized-banner {
+    background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
+    padding: 3rem 0;
+    text-align: center;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.banner-greeting {
+    font-family: 'Helvetica Neue', 'Arial', sans-serif;
+    font-size: 3rem;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.banner-message {
+    font-family: 'Helvetica Neue', 'Arial', sans-serif;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
 /* Footer */
 footer {
     background-color: #1a2332;
