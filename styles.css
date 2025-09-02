@@ -468,6 +468,336 @@ footer {
     text-align: right;
 }
 
+/* TypeScript Services Page Styles */
+.tech-hero {
+    background: linear-gradient(135deg, #2d3748 0%, #4a5568 50%, #718096 100%);
+    color: white;
+    padding: 120px 0 60px;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.tech-hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.tech-intro {
+    padding: 60px 0;
+    background-color: white;
+}
+
+.intro-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.intro-content h2 {
+    font-size: 2.5rem;
+    color: #1a2332;
+    margin-bottom: 2rem;
+}
+
+.lead-text {
+    font-size: 1.3rem;
+    color: #2d3748;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.tech-lead {
+    padding: 60px 0;
+    background-color: #f7fafc;
+}
+
+.tech-lead h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #1a2332;
+    margin-bottom: 3rem;
+}
+
+.tech-lead-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.lead-bio h3 {
+    color: #d4af37;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    font-size: 1.2rem;
+    color: #2d3748;
+    font-style: italic;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: white;
+    border-left: 4px solid #d4af37;
+}
+
+.expertise-summary,
+.current-role {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.expertise-summary h4,
+.current-role h4 {
+    color: #1a2332;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.tech-expertise {
+    padding: 60px 0;
+    background-color: white;
+}
+
+.tech-expertise h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #1a2332;
+    margin-bottom: 3rem;
+}
+
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.expertise-card {
+    background-color: #f7fafc;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 2px solid #edf2f7;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.expertise-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(26, 35, 50, 0.15);
+    border-color: #d4af37;
+}
+
+.expertise-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.expertise-card h3 {
+    color: #1a2332;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.expertise-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.expertise-card li {
+    padding: 0.5rem 0;
+    color: #4a5568;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.expertise-card li:last-child {
+    border-bottom: none;
+}
+
+.notable-projects {
+    padding: 60px 0;
+    background-color: #edf2f7;
+}
+
+.notable-projects h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #1a2332;
+    margin-bottom: 3rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+    color: #1a2332;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-card p {
+    color: #d4af37;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.project-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.project-card li {
+    padding: 0.5rem 0;
+    color: #4a5568;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.project-card li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #d4af37;
+}
+
+.tech-services {
+    padding: 60px 0;
+    background-color: white;
+}
+
+.tech-services h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #1a2332;
+    margin-bottom: 3rem;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.service-item {
+    padding: 1.5rem;
+    background-color: #f7fafc;
+    border-radius: 8px;
+    border-left: 4px solid #d4af37;
+}
+
+.service-item h3 {
+    color: #1a2332;
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+}
+
+.service-item p {
+    color: #4a5568;
+    line-height: 1.6;
+}
+
+.why-eastwood-tech {
+    padding: 60px 0;
+    background: linear-gradient(135deg, #1a2332 0%, #2d3748 100%);
+    color: white;
+}
+
+.why-eastwood-tech h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.benefit {
+    text-align: center;
+    padding: 2rem;
+}
+
+.benefit h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #d4af37;
+}
+
+.benefit p {
+    line-height: 1.6;
+    opacity: 0.95;
+}
+
+.tech-cta {
+    padding: 80px 0;
+    background-color: #f7fafc;
+    text-align: center;
+}
+
+.tech-cta h2 {
+    font-size: 2.5rem;
+    color: #1a2332;
+    margin-bottom: 1.5rem;
+}
+
+.cta-text {
+    font-size: 1.3rem;
+    color: #4a5568;
+    margin-bottom: 2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.tech-button {
+    background-color: #4a5568;
+}
+
+.tech-button:hover {
+    background-color: #2d3748;
+}
+
+.contact-direct {
+    color: #4a5568;
+    font-size: 1.1rem;
+}
+
+.contact-direct a {
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-direct a:hover {
+    text-decoration: underline;
+}
+
+.nav-links a.active {
+    color: #d4af37;
+    font-weight: bold;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero .container {
@@ -506,5 +836,23 @@ footer {
     
     .footer-contact {
         text-align: center;
+    }
+    
+    .tech-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .services-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .expertise-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
     }
 }
